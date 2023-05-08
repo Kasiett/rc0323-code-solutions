@@ -12,8 +12,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 - When an arrow function's body is not surrounded in curly braces (_concise body syntax_), what changes in its functionality?
   the main difference between a concise body and a block body arrow function is that the concise body syntax returns the value of the expression without using an explicit return statement.
-  when there is no {} the function implicitly returns the value of the expression following the arrow (=>) symbol. and
-  it should be one line function
+  when there is no {} the function implicitly returns the value of the expression following the arrow (=>) symbol. and it should be one line function
 - When using _concise body syntax_, how do you return an object literal?
   To return an object literal using the concise body syntax in an arrow function, we need to wrap the object literal in parentheses to avoid ambiguity with the function block braces, also to differentiate from regular code block
 - In the expression
@@ -22,7 +21,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   foo(() => 42);
   ```
 
-  - Identify the arrow function
+  - Identify the arrow function ==> parentheses with no arguments followed by arrow and number 42
 
   - How many arguments does the arrow function take? ==> it take no parameters
 
@@ -40,7 +39,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   });
   ```
 
-  - Identify the arrow function
+  - Identify the arrow function ==> parentheses with one argument 'y' followed by arrow and opening curly braces loging template literal .
 
   - How many arguments does the arrow function take? ==> take one arg 'y'
 
@@ -52,7 +51,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 
   - When does the arrow function's code get executed?
 
-- How does the value of `this` differ between standard functions and arrow functions?
+- How does the value of `this` differ between standard functions and arrow functions? ==>
 
 ## Notes
 
