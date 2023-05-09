@@ -5,7 +5,7 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What are the `&&` (logical AND) and `||` (logical OR) operators and how can they be used outside of `if` statements?
-  The operator returns the value of the first falsy operand encountered when evaluating from left to right, or the value of the last operand if they are all truthy.
+  && AND operator returns the value of the first falsy operand encountered when evaluating from left to right, or the value of the last operand if they are all truthy.
   The logical OR (||) (logical disjunction) operator for a set of operands is true if and only if one or more of its operands is true. It is typically used with boolean (logical) values. When it is, it returns a Boolean value. However, the || operator actually returns the value of one of the specified operands, so if this operator is used with non-Boolean values, it will return a non-Boolean value.
 
 - What is "short-circuit evaluation" and how does it apply to `&&` and `||`?
