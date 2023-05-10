@@ -1,0 +1,155 @@
+    1  git status
+    2  git pull origin main
+    3  git branch es6-destructuring
+    4  git switch es6-destructuring
+    5  git status
+    6  git add es6-destructuring/
+    7  git commit -m  "completed es6-destructuring exercise"
+    8  npm install eslint-plugin-react@latest --save-dev
+    9  git status
+   10  git add .
+   11  git status
+   12  git commit  -m "Completed es6-destructuring exercise"
+   13  history
+   14  npm install eslint-plugin-react-hooks@latest --save-dev
+   15  git status
+   16  git add .
+   17  git commit  -m "Completed es6-destructuring exercise"
+   18  git push origin es6-destructuring 
+   19  git status
+   20  git switch es6-destructuring 
+   21  git switch main
+   22  git branch es6-arrow-functions
+   23  git switch es6-arrow-functions
+   24  git status
+   25  git add es6-arrow-functions/
+   26  git commit -m "Completed es6-arrow-functions"
+   27  git push origin es6-arrow-functions 
+   28  git status
+   29  git add es6-arrow-functions/
+   30  git commit -m "Added QQ"
+   31  git push es6-arrow-functions/
+   32  git switch main
+   33  git switch es6-arrow-functions 
+   34  git push origin es6-arrow-functions 
+   35  git switch main
+   36  git branch es6-operators
+   37  git switch es6-operators 
+   38  git status
+   39  git add es6-operators/
+   40  git commit -m "Completed es6-operators exercise"
+   41  git push origin es6-operators 
+   42  git status
+   43  git status
+   44  git add es6-operators/
+   45  git commit -m "Added QQ"
+   46  git push origin es6-operators 
+   47  git switch es6-destructuring 
+   48  git status
+   49  git add es6-destructuring/
+   50  git commit -m "Changesd QQ answers as requested"
+   51  git push origin es6-destructuring 
+   52  git switch main
+   53  git switch es6-operators 
+   54  git status
+   55  git switch main
+   56  git branch array-filter
+   57  git switch array-filter 
+   58  git status
+   59  git add array-methods/
+   60  git commit -m "Completed Array Methods exercise"
+   61  git push origin array-filter 
+   62  git switch array-filter 
+   63  git branch -M array-methods
+   64  git push origin array-methods 
+   65  git switch main
+   66  git pull origin main
+   67  git branch command-line-basics
+   68  git switch command-line-basics 
+   69  cd command-line-basics/
+   70  man man
+   71  man cat
+   72  cat laziness.txt
+   73  cat impatience.txt
+   74  cat hubris.txt
+   75  man cat
+   76  cat laziness.txt + impatience.txt + hubris.txt 
+   77  cat laziness.txt impatience.txt hubris.txt 
+   78  man cat
+   79  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+   80   cat three-virtues.txt 
+   81  man ls
+   82  man ls
+   83  ls
+   84  ls -a
+   85  ls -F
+   86  cd lfz-staff/
+   87  ls
+   88  ls -a
+   89  ls -F
+   90  ls -aF lfz-staff > lfz-staff/contents.txt
+   91  ls -aF lfz-staff > lfz-staff/contents.txt
+   92  cd ..
+   93  ls -aF lfz-staff > lfz-staff/contents.txt
+   94  cat lfz-staff/contents.txt
+   95  man pwd
+   96  pwd
+   97  pwd > i-was-here.txt
+   98  ls
+   99  man echo
+  100  echo 'Hello World!'
+  101  echo 'Hello, World!' > hello.txt
+  102  ls
+  103  cat hello.txt 
+  104  man touch
+  105  man touch
+  106  touch tag-youre-it.txt
+  107  ls
+  108  touch snoot/boop.txt
+  109  ls
+  110  cd snoot/
+  111  ls
+  112  cd ..
+  113  ls
+  114  pwd
+  115  man mkdir
+  116  man mkdir
+  117  mkdir parent
+  118  ls
+  119  ls -F
+  120  mkdir -p parent/child/grandchild
+  121  ls
+  122  touch parent/child/grandchild/.gitkeep
+  123  ls -a
+  124  pwd
+  125  cd parent
+  126  ls
+  127  cd child
+  128  ls
+  129  cd grandchild/
+  130  ls
+  131  ls -a
+  132  cd ../../..
+  133  pwd
+  134  man mv
+  135  man mv
+  136  man mv
+  137  mv pokiemans/ pokemon/
+  138  ls
+  139  man rm
+  140  rm lol.txt
+  141  ls
+  142  rm -r kill-me/
+  143  ls
+  144  man cp
+  145  man cp
+  146  cp and-then.txt no-and-then.txt
+  147  ls
+  148  cat 
+  149  man cat
+  150  man cat
+  151  cat and-then.txt 
+  152  cat no-and-then.txt 
+  153  man history
+  154  history
+  155  history > command-history.txt
