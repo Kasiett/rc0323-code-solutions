@@ -84,6 +84,7 @@ async function throwChained() {
   }
 }
 
+// execute functions
 await throwOnce();
 await throwSeveral();
 await throwChained();
