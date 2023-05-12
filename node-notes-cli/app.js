@@ -29,8 +29,12 @@ try {
 async function updateNote(key, value) {
   const data = await readFile('data.json', 'utf-8');
   const res = JSON.parse(data);
-  res.notes[key] = value;
-  await writeFile('data.json', JSON.stringify(res, null, 2));
+  if (res.notes[key]) {
+    res.notes[key] = value;
+    await writeFile('data.json', JSON.stringify(res, null, 2));
+  } else {
+    console.error('Please provide valid key');
+  }
 }
 
 async function deleteNote(noteId) {
