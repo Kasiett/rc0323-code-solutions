@@ -5,6 +5,7 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What is NPM?
+
   Node Package Manager. It is a package manager for the JavaScript runtime environment Node.js. NPM is used for managing and distributing open-source JavaScript packages/modules that are published on the NPM registry.
 
 - What is a package?
@@ -31,6 +32,7 @@ npm will create the package.json file in your project's directory, based on the 
 
 - What is a dependency and how do you add one to a package?
   a dependency refers to an external module, library, or package that your project relies on to function correctly. Dependencies are required for your code to access pre-existing functionality, reuse code, or integrate with third-party tools and frameworks
+
 
 - What happens when you add a dependency to a package with `npm`?
 
