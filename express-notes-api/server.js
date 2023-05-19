@@ -46,6 +46,52 @@ app.post('/api/notes', async (req, res) => {
   }
 });
 
+app.delete('/api/notes/:id', async (req, res) => {
+  const id = Number(req.params.id);
+  const data = await getData();
+  if (!id || !Number.isInteger(id) || id < 1) {
+    res.status(400).json({ error: 'it must be a positive integer.' });
+  } else if (data.notes[id] === undefined) {
+    res.status(404).json({ error: `cannot find note with id ${id}` });
+  } else {
+    try {
+      delete data.notes[id];
+      await writeFile('./data.json', JSON.stringify(data, null, 2));
+      res.status(204);
+    } catch (error) {
+      res.status(500).json({ error: 'An unexpected error occurred.' });
+    }
+  }
+});
+
+app.put('/api/notes/:id', async (req, res) => {
+  const id = Number(req.params.id);
+  const newContent = req.body.content;
+  const data = await getData();
+  console.log('>>', req.params);
+  if (!id || !Number.isInteger(id) || id < 1 || !req.body.content) {
+    res
+      .status(400)
+      .json({
+        error: 'it must be a positive integer and content must be present...',
+      });
+  } else if (data.notes[id] === undefined) {
+    res.status(404).json({ error: `cannot find note with id ${id}` });
+  } else {
+    try {
+      for (const note in data.notes) {
+        if (data.notes[note].id === id) {
+          data.notes[note].content = newContent;
+          await writeFile('data.json', JSON.stringify(data, null, 2));
+          res.status(201).json(newContent);
+        }
+      }
+    } catch (error) {
+      res.status(500).json({ error: 'An unexpected error occurred.' });
+    }
+  }
+});
+
 app.listen(8080, (req, res) => {
   console.log('listening localhost:8080...');
 });
