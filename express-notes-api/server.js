@@ -19,14 +19,20 @@ app.get('/api/notes', async (req, res) => {
 });
 
 app.get('/api/notes/:id', async (req, res) => {
-  const data = await getData();
-  const id = Number(req.params.id);
-  if (!id || !Number.isInteger(id) || id < 1) {
-    res.status(400).json({ error: 'id must be a positive integer' });
-  } else if (data.notes[id] === undefined) {
-    res.status(404).json({ error: `cannot find note with id ${id}` });
+  try {
+    const data = await getData();
+    const id = Number(req.params.id);
+    if (!id || !Number.isInteger(id) || id < 1) {
+      res.status(400).json({ error: 'id must be a positive integer' });
+    } else if (data.notes[id] === undefined) {
+      res.status(404).json({ error: `cannot find note with id ${id}` });
+    }
+    res.json(data.notes[id]);
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({ error: 'an unexpected error occurred' });
   }
-  res.json(data.notes[id]);
 });
 
 app.post('/api/notes', async (req, res) => {
@@ -65,20 +71,18 @@ app.delete('/api/notes/:id', async (req, res) => {
 });
 
 app.put('/api/notes/:id', async (req, res) => {
-  const id = Number(req.params.id);
-  const newContent = req.body.content;
-  const data = await getData();
-  console.log('>>', req.params);
-  if (!id || !Number.isInteger(id) || id < 1 || !req.body.content) {
-    res
-      .status(400)
-      .json({
+  try {
+    const id = Number(req.params.id);
+    const newContent = req.body.content;
+    const data = await getData();
+
+    if (!id || !Number.isInteger(id) || id < 1 || !req.body.content) {
+      res.status(400).json({
         error: 'it must be a positive integer and content must be present...',
       });
-  } else if (data.notes[id] === undefined) {
-    res.status(404).json({ error: `cannot find note with id ${id}` });
-  } else {
-    try {
+    } else if (data.notes[id] === undefined) {
+      res.status(404).json({ error: `cannot find note with id ${id}` });
+    } else {
       for (const note in data.notes) {
         if (data.notes[note].id === id) {
           data.notes[note].content = newContent;
@@ -86,9 +90,9 @@ app.put('/api/notes/:id', async (req, res) => {
           res.status(201).json(newContent);
         }
       }
-    } catch (error) {
-      res.status(500).json({ error: 'An unexpected error occurred.' });
     }
+  } catch (error) {
+    res.status(500).json({ error: 'An unexpected error occurred.' });
   }
 });
 
