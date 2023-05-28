@@ -1,0 +1,19 @@
+.title,
+.content {
+  border: 1px solid black;
+  width: 400px;
+  margin: auto;
+  padding: 15px;
+}
+
+.title {
+  background-color: lightgray;
+}
+
+.hidden {
+  display: none;
+}
+
+.accordian {
+  display: block;
+}
