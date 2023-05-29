@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.box {
+  margin: 0 auto;
+  border: 3px solid black;
+  padding: 20px;
+  width: 700px;
+  height: 400px;
+}
+
+.left-arrow {
+  font-size: xx-large;
+  margin-bottom: 150px;
+  margin-right: 35px;
+}
+
+.right-arrow {
+  font-size: xx-large;
+  margin-bottom: 150px;
+  margin-left: 35px;
+}
+
+.circle {
+  margin-right: 10px;
+  margin-top: 30px;
+  font-size: small;
+}
